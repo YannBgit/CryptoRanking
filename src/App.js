@@ -6,24 +6,25 @@ import Fouter from './components/Fouter';
 import Home from "./pages/Home";
 import Menu from './pages/Menu';
 import AboutUs from './pages/AboutUs';
-
+import Connexion from './pages/Connexion';
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import reactRouterDom from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">        
-         <Router>
-               <Navbar/> 
-               <Switch>
-                 <Route path="/" exact component={Home}/> 
-                 <Route path="/menu" exact component={Menu}/> 
-                 <Route path="/aboutUs" exact component={AboutUs}/> 
-               </Switch>
-               
-             </Router>
-         
+    <div className="App">
+      <Router>
+        <Navbar />
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/menu" exact component={Menu} />
+          <Route path="/aboutUs" exact component={AboutUs} />
+          <Route path="/connexion" exact component={Connexion} />
+        </Switch>
+
+      </Router>
+
 
     </div>
   );
