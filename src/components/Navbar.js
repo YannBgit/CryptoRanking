@@ -17,7 +17,8 @@ function navbar() {
         <NavLink to="/menu" >Menu </NavLink>
         <NavLink to="/aboutUs" >about us </NavLink>
         <NavLink to="/connexion" > connexion </NavLink>
-
+        <NavLink to="/inscription"> inscription </NavLink>
+        
       </div>
     </div>
   )
