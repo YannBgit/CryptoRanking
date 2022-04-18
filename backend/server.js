@@ -1,18 +1,28 @@
 const express = require('express');
-const cors = require('cors');
-const morgan = require('morgan');
-const fetch = require('node-fetch');
+
+//const fetch = require('node-fetch');
 
 const app = express();
 
-app.use(cors())
-app.use(morgan("monnaies"))
+const port = process.env.PORT || 4999;
 
 
+app.listen(port, () => {
+    console.log(`Server is up on port ${port}`);
+});
 
-const port = process.env.PORT || 5000;
-
-app.listen(port, () =>
+/*
+app.get('/', (req, res) =>
 {
-	console.log('En écoute du port $(port)')
+    res.send('Hello World ! test')
 })
+
+app.get("/api", async (req, res) => {
+    //const aq_url = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false`;
+    //const aq_response = await node-fetch(aq_url);
+    //const aq_data = await aq_response.json();
+    //res.json(aq_data);
+    console.log("test");
+    //console.log(aq_data);
+});
+*/
