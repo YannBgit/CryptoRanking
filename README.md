@@ -9,7 +9,18 @@ Projet réalisé par :
 
 # quick start
 
-## installation 
+## server installation
+
+```cd server```
+
+```npm install --force```
+
+```npm run dev```
+
+## client installation 
+
+```cd client```
+
 ```npm install --force```
 
 ## execution du script tailwind
@@ -19,3 +30,5 @@ Projet réalisé par :
 ## execution de react
 
 ```npm start```
+
+vérifier si le proxy communique bien, sinon vérifié si le port 5000 est bien sur écoute
