@@ -13,10 +13,11 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import reactRouterDom from 'react-router-dom';
 
 function App() {
-  
+  const name = window.sessionStorage.getItem('name')
+  console.log(name);
   return (
     <div className="App">
-      {TestServer()}
+      
       <Router>
         <Navbar />
         <Switch>
