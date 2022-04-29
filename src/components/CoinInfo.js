@@ -3,6 +3,10 @@ import { useEffect, useState } from "react";
 import { HistoricalChart } from "../config/api";
 import { Line } from "react-chartjs-2";
 import {
+  Chart as ChartJS,
+  CategoryScale,
+  } from 'chart.js';
+import {
   CircularProgress,
   createTheme,
   makeStyles,
@@ -17,6 +21,10 @@ const CoinInfo = ({ coin }) => {
   const [days, setDays] = useState(1);
   const { currency } = CryptoState();
   const [flag,setflag] = useState(false);
+  
+   ChartJS.register(
+    CategoryScale,
+    );
 
   const useStyles = makeStyles((theme) => ({
     container: {
