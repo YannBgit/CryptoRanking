@@ -4,9 +4,12 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ReactHtmlParser from "react-html-parser";
 import CoinInfo from "../components/CoinInfo";
-import { SingleCoin } from "../config/api";
 import { numberWithCommas } from "../components/CoinsTable";
 import { CryptoState } from "../CryptoContext";
+
+const SingleCoin = (id) => 
+  `https://api.coingecko.com/api/v3/coins/${id}`;
+
 
 const CoinPage = () => {
   const { id } = useParams();
@@ -15,8 +18,8 @@ const CoinPage = () => {
   const { currency, symbol } = CryptoState();
 
   const fetchCoin = async () => {
-    const { data } = await axios.get(SingleCoin(id));
-
+    const { data } = await axios.get(SingleCoin(id)); //`/SingleCoin/${id}`)
+    console.log(SingleCoin(id))
     setCoin(data);
   };
 
@@ -75,6 +78,7 @@ const CoinPage = () => {
       },
     },
   }));
+
 
   const classes = useStyles();
 
@@ -145,12 +149,11 @@ const CoinPage = () => {
                   .toString()
                   .slice(0, -6)
               )}
-              M
             </Typography>
           </span>
         </div>
       </div>
-      <CoinInfo coin={coin} />
+      <CoinInfo coin={coin} /> 
     </div>
   );
 };

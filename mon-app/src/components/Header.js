@@ -1,11 +1,5 @@
 import {
-  AppBar,
-  Container,
-  MenuItem,
-  Select,
-  Toolbar,
-  Typography,
-} from "@material-ui/core";
+  AppBar,Button,Container,MenuItem,Select,Toolbar,Typography,} from "@material-ui/core";
 import {
   createTheme,
   makeStyles,
@@ -17,7 +11,7 @@ import { CryptoState } from "../CryptoContext";
 const useStyles = makeStyles((theme) => ({
   title: {
     flex: 1,
-    color: "gold",
+    color: '#00c2ff',
     fontFamily: "Montserrat",
     fontWeight: "bold",
     cursor: "pointer",
@@ -49,8 +43,14 @@ function Header() {
               variant="h6"
               className={classes.title}
             >
-              Crypto Hunter
+              Crypto Tracker
             </Typography>
+            <Button 
+            style={{ width: 100, height: 40, marginLeft: 15 }}
+            onClick={() => history.push(`/Connexion`)}
+            >
+            <img src="https://img.icons8.com/fluency/48/000000/login-rounded-right.png"/>
+            </Button>
             {/* <Button color="inherit">Login</Button> */}
             <Select
               variant="outlined"
@@ -61,7 +61,7 @@ function Header() {
               onChange={(e) => setCurrency(e.target.value)}
             >
               <MenuItem value={"USD"}>USD</MenuItem>
-              <MenuItem value={"INR"}>INR</MenuItem>
+              <MenuItem value={"EUR"}>EUR</MenuItem>
             </Select>
           </Toolbar>
         </Container>

@@ -4,6 +4,8 @@ import "./App.css";
 import { BrowserRouter, Route } from "react-router-dom";
 import CoinPage from "./Pages/CoinPage";
 import Header from "./components/Header";
+import Connexion from "./Pages/Connexion";
+import Inscription from "./Pages/Inscription"
 
 const useStyles = makeStyles(() => ({
   App: {
@@ -22,6 +24,8 @@ function App() {
         <Header />
         <Route path="/" component={Homepage} exact />
         <Route path="/coins/:id" component={CoinPage} exact />
+        <Route path="/Connexion" component={Connexion} exact/>
+        <Route path="/Inscription" component={Inscription} exact/>
       </div>
     </BrowserRouter>
   );

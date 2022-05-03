@@ -17,7 +17,6 @@ import {
   Paper,
 } from "@material-ui/core";
 import axios from "axios";
-import { CoinList } from "../config/api";
 import { useHistory } from "react-router-dom";
 import { CryptoState } from "../CryptoContext";
 
@@ -44,7 +43,7 @@ export default function CoinsTable() {
     },
     pagination: {
       "& .MuiPaginationItem-root": {
-        color: "gold",
+        color: "#00c2ff",
       },
     },
   });
@@ -62,8 +61,9 @@ export default function CoinsTable() {
   });
 
   const fetchCoins = async () => {
+
     setLoading(true);
-    const { data } = await axios.get(CoinList(currency));
+    const { data } = await axios.get(`/CoinList/${currency}`);//CoinList(currency)); // //
     console.log(data);
 
     setCoins(data);
@@ -90,10 +90,10 @@ export default function CoinsTable() {
           variant="h4"
           style={{ margin: 18, fontFamily: "Montserrat" }}
         >
-          Cryptocurrency Prices by Market Cap
+          Classement des cryptomonnaies par prix du marché
         </Typography>
         <TextField
-          label="Search For a Crypto Currency.."
+          label="Recherchez une cryptomonnaie..."
           variant="outlined"
           style={{ marginBottom: 20, width: "100%" }}
           onChange={(e) => setSearch(e.target.value)}
@@ -103,9 +103,9 @@ export default function CoinsTable() {
             <LinearProgress style={{ backgroundColor: "gold" }} />
           ) : (
             <Table aria-label="simple table">
-              <TableHead style={{ backgroundColor: "#EEBC1D" }}>
+              <TableHead style={{ backgroundColor: "#00c2ff" }}>
                 <TableRow>
-                  {["Coin", "Price", "24h Change", "Market Cap"].map((head) => (
+                  {["Monnaie", "Prix", "Changements sur 24h", "Valeur totale sur le marché"].map((head) => (
                     <TableCell
                       style={{
                         color: "black",
@@ -143,7 +143,8 @@ export default function CoinsTable() {
                           <img
                             src={row?.image}
                             alt={row.name}
-                            height="50"
+                            height="80"
+                            width="80"
                             style={{ marginBottom: 10 }}
                           />
                           <div

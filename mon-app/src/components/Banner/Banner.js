@@ -3,8 +3,13 @@ import Carousel from "./Carousel";
 
 const useStyles = makeStyles((theme) => ({
   banner: {
-    backgroundImage: "url(./background.jpg)",
-  },
+    backgroundImage: 'url(./cryptoImg2.jpg)',
+    backgroundPosition: 'center', 
+    backgroundSize: 'cover', 
+    backgroundRepeat: 'no-repeat',
+    maxWidth : "100%",
+    height : "auto",
+    },
   bannerContent: {
     height: 400,
     display: "flex",
@@ -41,17 +46,17 @@ function Banner() {
               fontFamily: "Montserrat",
             }}
           >
-            Crypto Hunter
+            Crypto Tracker
           </Typography>
           <Typography
             variant="subtitle2"
             style={{
-              color: "darkgrey",
+              color: "#124358",
               textTransform: "capitalize",
               fontFamily: "Montserrat",
             }}
           >
-            Get all the Info regarding your favorite Crypto Currency
+            Entrez le nom d'une cryptomonnaie dans la barre de recherche
           </Typography>
         </div>
         <Carousel />
