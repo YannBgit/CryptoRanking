@@ -15,7 +15,7 @@ Projet réalisé par :
 
 ## client installation and starting
 
-```cd mon-app```
+```cd client```
 
 ```npm install --force```
 
