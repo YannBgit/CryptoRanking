@@ -7,7 +7,7 @@ function Inscription() {
         <div class="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div class="max-w-md w-full space-y-8">
           <div>
-            <h2 class="mt-2 text-center text-yellow-400 font-semibold text-5xl font-mono tracking-wide">CryptoTracker</h2>
+            <h2 class="mt-2 text-center text-yellow-400 font-semibold text-5xl font-mono tracking-wide">CryptoRanking</h2>
           </div>
           <div class="bg-gray-100 px-8 py-8 border-4 border-pink-500 rounded-lg drop-shadow-2xl ">
           <h3 class="text-center text-gray-800">Inscription</h3>

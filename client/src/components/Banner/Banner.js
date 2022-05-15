@@ -46,7 +46,7 @@ function Banner() {
               fontFamily: "Montserrat",
             }}
           >
-            Crypto Tracker
+            Crypto Ranking
           </Typography>
           <Typography
             variant="subtitle2"

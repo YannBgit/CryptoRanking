@@ -43,7 +43,7 @@ function Header() {
               variant="h6"
               className={classes.title}
             >
-              Crypto Tracker
+              Crypto Ranking
             </Typography>
             <Button 
             style={{ width: 100, height: 40, marginLeft: 15 }}
