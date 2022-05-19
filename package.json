@@ -8,7 +8,11 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "heroku-postbuild": "cd client && npm install && npm run build"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YannBgit/CryptoRanking"
+  },
+  "author": "YannBgit",
   "license": "ISC",
   "dependencies": {
     "cookie-parser": "^1.4.6",
