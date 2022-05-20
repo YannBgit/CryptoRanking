@@ -208,6 +208,7 @@ app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname + "/client/build/index.html"))
 })
 
+/*
 __dirname = path.resolve();
 
 if (process.env.NODE_ENV === "production") {
@@ -221,3 +222,4 @@ if (process.env.NODE_ENV === "production") {
     res.send("API is running..");
   });
 }
+*/
