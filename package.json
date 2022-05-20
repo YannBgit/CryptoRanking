@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "heroku-postbuild": "npm install --force --prefix client && npm install express && npm run build --prefix client"
+    "heroku-postbuild": "set NPM_CONFIG_PRODUCTION=false npm install --force --prefix client && npm install express && npm run build --prefix client"
   },
   "repository": {
     "type": "git",
