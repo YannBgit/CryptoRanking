@@ -3,7 +3,7 @@ import Carousel from "./Carousel";
 
 const useStyles = makeStyles((theme) => ({
   banner: {
-    backgroundImage: 'url(./cryptoImg2.jpg)',
+    backgroundImage: 'url(./glass-3389935_1280.jpg)',
     backgroundPosition: 'center', 
     backgroundSize: 'cover', 
     backgroundRepeat: 'no-repeat',
@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
     height : "auto",
     },
   bannerContent: {
-    height: 400,
+    height: 500,
     display: "flex",
     flexDirection: "column",
     paddingTop: 25,
@@ -23,6 +23,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     justifyContent: "center",
     textAlign: "center",
+    width: "100%",
   },
   carousel: {
     height: "50%",
@@ -39,25 +40,16 @@ function Banner() {
       <Container className={classes.bannerContent}>
         <div className={classes.tagline}>
           <Typography
-            variant="h2"
+            variant="h3"
             style={{
               fontWeight: "bold",
-              marginBottom: 15,
+              marginBottom: 6,
               fontFamily: "Montserrat",
             }}
           >
             Crypto Ranking
           </Typography>
-          <Typography
-            variant="subtitle2"
-            style={{
-              color: "#124358",
-              textTransform: "capitalize",
-              fontFamily: "Montserrat",
-            }}
-          >
-            Entrez le nom d'une cryptomonnaie dans la barre de recherche
-          </Typography>
+          
         </div>
         <Carousel />
       </Container>

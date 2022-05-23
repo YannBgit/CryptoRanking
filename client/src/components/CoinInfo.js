@@ -35,7 +35,7 @@ import {
   Tooltip
   } from 'chart.js';
 import SelectButton from "./SelectButton";
-import { chartDays } from "../config/data";
+import { chartDays } from "../config/graphiqueData";
 import { CryptoState } from "../CryptoContext";
 
 const CoinInfo = ({ coin }) => {
@@ -139,7 +139,7 @@ const CoinInfo = ({ coin }) => {
                   {
                     data: historicData.map((coin) => coin[1]),
                     label: `Price ( Past ${days} Days ) in ${currency}`,
-                    borderColor: "#EEBC1D",
+                    borderColor: "gold",
                   },
                 ],
               }}

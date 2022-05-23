@@ -13,6 +13,7 @@
     "axios": "^0.26.1",
     "buffer": "^6.0.3",
     "chart.js": "^3.7.1",
+    "cryptoranking": "file:..",
     "react": "^17.0.2",
     "react-alice-carousel": "^2.5.1",
     "react-chartjs-2": "^4.1.0",

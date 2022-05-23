@@ -1,17 +1,18 @@
 import {
-  AppBar,Button,Container,MenuItem,Select,Toolbar,Typography,} from "@material-ui/core";
+  AppBar,Button,ButtonGroup,Container,MenuItem,Select,Toolbar,Typography,} from "@material-ui/core";
 import {
   createTheme,
   makeStyles,
   ThemeProvider,
 } from "@material-ui/core/styles";
+import React, { createContext, useState } from 'react'
 import { useHistory } from "react-router-dom";
 import { CryptoState } from "../CryptoContext";
 
 const useStyles = makeStyles((theme) => ({
   title: {
     flex: 1,
-    color: '#00c2ff',
+    color: 'white',
     fontFamily: "Montserrat",
     fontWeight: "bold",
     cursor: "pointer",
@@ -27,10 +28,47 @@ const darkTheme = createTheme({
   },
 });
 
+
+function Print_button(history) {  
+  const [cookie_read] = useState(document.cookie)
+  const [msg] = useState(cookie_read)
+  if(!msg)
+  {
+    return( 
+      <Button 
+        style={{ width: 100, height: 40, marginRight: 25 }}
+        onClick={() => history.push(`/Connexion`)}
+        >
+          Connexion
+        <img src="https://img.icons8.com/fluency/48/000000/login-rounded-right.png"/>
+      </Button>
+    )
+  }
+  else
+  {
+    return( 
+      <ButtonGroup>
+        <Button 
+          style={{ width: 300, height: 40, marginLeft: 15 }}
+          onClick={() => history.push(`/Connexion`)} // go do setting
+          >
+            {msg}        
+        </Button>
+        <Button
+          style={{ width: 100, height: 40, marginLeft: 15 }}
+          onClick={() => history.push(`/Disconnect`)}
+        >
+          LOGOUT
+      </Button>  
+      </ButtonGroup>  
+    )
+  }
+}
+
 function Header() {
   const classes = useStyles();
   const { currency, setCurrency } = CryptoState();
-
+  
   const history = useHistory();
 
   return (
@@ -45,12 +83,7 @@ function Header() {
             >
               Crypto Ranking
             </Typography>
-            <Button 
-            style={{ width: 100, height: 40, marginLeft: 15 }}
-            onClick={() => history.push(`/Connexion`)}
-            >
-            <img src="https://img.icons8.com/fluency/48/000000/login-rounded-right.png"/>
-            </Button>
+            {Print_button(history)}
             {/* <Button color="inherit">Login</Button> */}
             <Select
               variant="outlined"
